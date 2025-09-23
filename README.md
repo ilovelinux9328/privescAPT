@@ -1,9 +1,9 @@
-# APTpeas 🕵️‍♂️
+# privescAPT
 
-**APTpeas** is a post-exploitation enumeration tool inspired by LinPEAS, focused on techniques and artifacts commonly associated with Advanced Persistent Threat (APT) activity.
+**privescAPT** is a post-exploitation enumeration tool inspired by LinPEAS, focused on techniques and artifacts commonly associated with Advanced Persistent Threat (APT) activity.
 Its purpose is to help security researchers, red teamers, and incident responders identify suspicious configurations, persistence mechanisms, and traces that often appear in real-world APT intrusions.
 
-> **Disclaimer:** APTpeas is intended strictly for defensive research, threat hunting, incident response, and authorized red-team assessments. Do not run this tool on systems for which you do not have explicit permission. The authors are not responsible for misuse.
+> **Disclaimer:** privescAPT is intended strictly for defensive research, threat hunting, incident response, and authorized red-team assessments. Do not run this tool on systems for which you do not have explicit permission. The authors are not responsible for misuse.
 
 ---
 
@@ -59,8 +59,8 @@ Its purpose is to help security researchers, red teamers, and incident responder
 **Linux (example):**
 
 ```bash
-chmod +x aptpeas.sh
-bash aptpeas.sh
+chmod +x privescAPT.sh
+bash privescAPT.sh
 ```
 
 ---
@@ -68,14 +68,14 @@ bash aptpeas.sh
 ## Project Layout
 
 ```
-APTpeas/
-├── aptpeas.sh           # Linux enumeration script          
+privescAPT/
+├── privescAPT.sh           # Linux enumeration script          
 └── README.md            # This file
 ```
 
 ---
 
-## How APTpeas Differs from LinPEAS
+## How privescAPT Differs from LinPEAS
 
 * **APT-focused indicators:** Emphasis on artifacts and patterns commonly observed in APT investigations (e.g., long-lived stealthy persistence, evidence of living-off-the-land tool abuse, subtle logging configuration changes).
 * **TTP correlation:** Built-in mapping of findings to ATT\&CK techniques to speed analyst understanding and reporting.
@@ -85,7 +85,7 @@ APTpeas/
 
 ## Limitations & Safety
 
-* APTpeas performs **read-only** checks and does not exploit vulnerabilities, extract credentials, or perform destructive changes.
+* privescAPT performs **read-only** checks and does not exploit vulnerabilities, extract credentials, or perform destructive changes.
 * Due to the diversity of operating environments, **false positives and false negatives** are possible. Findings should be validated with additional forensic or monitoring data.
 * Use in production systems may trigger alerts in defensive products. Run in coordination with defenders when used in exercises.
 
@@ -118,5 +118,5 @@ This project is intended for legal and ethical security work: authorized red tea
 If you want, I can also:
 
 * Provide a ready-to-paste `LICENSE` (MIT or Apache-2.0).
-* Generate a basic `aptpeas.sh` or `APTpeas.ps1` skeleton with safe, non-destructive checks (read-only).
+* Generate a basic `privescAPT.sh` or `privescAPT.ps1` skeleton with safe, non-destructive checks (read-only).
 * Create a `ttp-mapping.md` file that pairs common findings with MITRE ATT\&CK IDs.
